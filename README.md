@@ -22,19 +22,18 @@ Twilio - texts the user if it determines that an unauthorized user has entered.
 Getting OpenCV to work. [add more details]
 Assembling everything [add more details]
 
-Since it was the first time we had used OpenCV and the Google Photos API, we ran into some challenges when trying to get the features to work together. In terms of OpenCV, it was difficult to 
-
+Since it was the first time we had used OpenCV and the Google Photos API, we ran into some challenges when trying to get the features to work together. In terms of OpenCV, it was difficult to figure out which tools were best suited to handle the face detection and machine learning for our situation.
 
 
 ## Accomplishments that we're proud of
 It works [add more details]
 
-We were able to successfully write a program that uses facial recognition and machine learning that has a tangible application in the real-world. 
+We were able to successfully write a program that uses facial recognition and machine learning that has a tangible application in the real-world.  We learned how to use the APIs OpenCV and Google Photos for both the software to work, and to have a user interface that is easy to use.
 
 ## What we learned
 OpenCV, Uno, Pi [add more details]
 
-For OpenCV, we learned how to ...
+For OpenCV, we learned how to use the diverse tools offered by OpenCV to detect faces and create accurate models. To do this, we also learned how to train models based on images and check how accurate the model is by using the test set. 
 
 ## What's next for Blah
 After the current base project, we would like to add the following features:
