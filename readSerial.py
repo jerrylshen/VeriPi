@@ -1,7 +1,5 @@
 import math
 import sendSMS
-import sendTS
-import readTS
 import serial
 #https://www.dummies.com/computers/raspberry-pi/raspberry-pi-projects-for-dummies-cheat-sheet/
 try:
@@ -32,4 +30,4 @@ while True:
     back = (str(back)[2:])
     print(back[0:6])
     #print (back[0:6])
-    if back[0:6] == "$GPRMC":
+    if back[0:6] =
