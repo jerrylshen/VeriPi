@@ -1,4 +1,5 @@
-# VeriPi, the AI Security Camera - HackUCI 2020 Project (1/30-2/2)
+# VeriPi, the AI Security Camera - HackUCI 2020 Project  
+## (1/30-2/2)
 
 ## Inspiration
 Security is vital to a safe and functional society. After hearing about the recent burglaries around Irvine, we wanted to find a way to help people know exactly what happens in their homes, so they can immediately contact the authories when trouble strikes. We found that the best way to address this issue would be to create a functional real-time security system that alerts you when an intruder has entered so that you can respond accordingly.
