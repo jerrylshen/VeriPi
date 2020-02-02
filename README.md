@@ -2,24 +2,24 @@
 ### (1/30-2/2)
 
 ## Inspiration
-Security is vital to a safe and functional society. After hearing about the recent burglaries around Irvine, we wanted to find a way to help people know exactly what happens in their homes, so they can immediately contact the authories when trouble strikes. We found that the best way to address this issue would be to create a functional real-time security system that alerts you when an intruder has entered so that you can respond accordingly.
+Security is vital to a safe and functional society. After hearing about the recent burglaries around Irvine, we wanted to find a way to help people know exactly what happens in their homes, so they can immediately contact the authories when trouble strikes. We found that the best way to address this issue would be to create a functional real-time security system that alerts you when an intruder has entered so that you can respond accordingly.  
 
 ## What it does
-VeriPi is an IoT security camera that authenticates the user mainly through facial recognition, given that the AI is given a training dataset of images. It's designed to be placed on the door, where it can detect when people come and go, but can be placed on other potential entry points throughout a home. Each user has a limited time window to verify their identity. If they fail to do so within a set timeframe, the Raspberry Pi sends a message to the user stating that there is an intruder present. In the rare case when the camera doesn't work, the user can verify their identity through a passcode. Additionally, this passcode can be shared with people that VeriPi's AI has not been trained to recognize yet.
+VeriPi is an IoT security camera that authenticates the user mainly through facial recognition, given that the AI is given a training dataset of images. It's designed to be placed on the door, where it can detect when people come and go, but can be placed on other potential entry points throughout a home. Each user has a limited time window to verify their identity. If they fail to do so within a set timeframe, the Raspberry Pi sends a message to the user stating that there is an intruder present. In the rare case when the camera doesn't work, the user can verify their identity through a passcode. Additionally, this passcode can be shared with people that VeriPi's AI has not been trained to recognize yet.  
 
 ## How we built it
 The Arduino Uno, as the slave, has the following modules: accelerometer, capacitive input, and LED light.
-The Raspberry Pi 4, as the master, is used to train the AI and conduct the facial recognition aspect, while also being connected to the Internet, where it can send SMS messages to the emergency contact.  
+The Raspberry Pi 4, as the master, is used to train the AI and conduct the facial recognition aspect, while also being connected to the Internet, where it can send SMS messages to the emergency contact.    
 
-The Uno and Pi are both connected and communicate via serial. This relationship allows the Uno to be powered by the Pi which is, in turn, powered externally by a battery or outlet.
+The Uno and Pi are both connected and communicate via serial. This relationship allows the Uno to be powered by the Pi which is, in turn, powered externally by a battery or outlet.  
 
 
 ## APIs Used
-OpenCV - uses machine learning to recognize faces and determine whether or not a user is authorized to enter
+OpenCV - uses machine learning to recognize faces and determine whether or not a user is authorized to enter.  
 
-Twilio - texts the user if an unauthorized user has been detected
+Twilio - texts the user if an unauthorized user has been detected.  
 
-Cloudinary - allows the user to upload photos through our website (https://hackuci2020-266911.firebaseapp.com/), which can be directly accessed by the Raspberry Pi
+Cloudinary - allows the user to upload photos through our website (https://hackuci2020-266911.firebaseapp.com/), which can be directly accessed by the Raspberry Pi.  
 
 
 ## Challenges we ran into
@@ -32,17 +32,17 @@ On the front-end side, it was difficult to find which API use to upload the imag
 
 ## Accomplishments that we're proud of
 
-In the end, we successfully wrote a program that uses facial recognition and machine learning with a tangible application in the real world. In doing so, we have gained an awareness of the potential impact of our work as creative developers, integrating a multitude of concepts and tools into seamless processes that can be put to good use.
+In the end, we successfully wrote a program that uses facial recognition and machine learning with a tangible application in the real world. In doing so, we have gained an awareness of the potential impact of our work as creative developers, integrating a multitude of concepts and tools into seamless processes that can be put to good use.  
 
 We successfully trained OpenCV's facial recognition algorithm to recognize a few particular faces.  Our program uses the results of the facial recognition to send information to the Raspberry Pi, which then sends text message alerts through Twilio based on who it detects.
 
 ## What we learned
 
-For OpenCV, we learned how to use its diverse tools to detect faces and create accurate models. To ensure the accuracy of our model, we utilized a large dataset of images to both train and test our end-product. 
+For OpenCV, we learned how to use its diverse tools to detect faces and create accurate models. To ensure the accuracy of our model, we utilized a large dataset of images to both train and test our end-product.  
 
-In the front-end, we learned how to implement an image drag-and-drop feature using Javascript, HTML, and CSS. To do this, we learned about event listeners and handlers to upload the images with their respective name. We also decided to create objects to store the names of the people and their respective images. Additionally, we learned how to use an API to upload images online. From there, we could use a python script that downloads the images for OpenCV to use.
+In the front-end, we learned how to implement an image drag-and-drop feature using Javascript, HTML, and CSS. To do this, we learned about event listeners and handlers to upload the images with their respective name. We also decided to create objects to store the names of the people and their respective images. Additionally, we learned how to use an API to upload images online. From there, we could use a python script that downloads the images for OpenCV to use.  
 
-We ultimately learned how to use a variety of new tools that have a wide range of applications. Through these experiences, we have grown to better understand how those working together to create a product should be aware of their impact on the work of others so that a cohesive product can be put together in the end.
+We ultimately learned how to use a variety of new tools that have a wide range of applications. Through these experiences, we have grown to better understand how those working together to create a product should be aware of their impact on the work of others so that a cohesive product can be put together in the end.  
 
 ## What's next for VariPi  
 After the initial base project, we would like to add the following features:  
