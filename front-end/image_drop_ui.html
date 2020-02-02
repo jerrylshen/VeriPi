@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>AISecurityCamera</title>
+        
+        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+        
+        <link href="initial_style.css" rel="stylesheet">
+        
+  </head>
+    
+  <body>
+      <h1 id="subtitle">Welcome to AISecurityCamera!</h1>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      
+      <div id="drop-area">
+          <form>
+            <label class="button" for="fileElem">Drag Images Here (or Click to Select)</label>
+            <br> 
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </form>
+      </div>
+      
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      
+      <script type="text/javascript" src="drop_and_upload.js"></script>
+  </body>
+</html>
