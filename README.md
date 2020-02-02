@@ -23,10 +23,9 @@ Cloudinary - allows the user to upload photos through our website which can be d
 
 
 ## Challenges we ran into
-Getting OpenCV to work. [add more details]
 Assembling everything [add more details]
 
-Since it was the first time we had used OpenCV, we ran into some challenges when trying to get the features to work together. It was difficult to figure out which tools were best suited to handle the face detection and machine learning for our situation.
+Since it was our first time using OpenCV, we ran into some challenges when trying to get the features to work together. It was difficult to figure out which tools were best suited to handle the face detection and machine learning for our situation.  Providing good training data so that openCV could recognize individual faces was something that was accomplished with a lot of trial and error.  We also tried a few different facial recognition algorithms before finding one that worked consistently.
 
 On the front-end side, it was difficult to find which API use to upload the images online. While we initially pursued Google's Photos and Drive APIs, we soon found that the severe lack of thoroughness and clearness in documentation worsened by the tight security of the APIs made them too difficult to navigate, particularly given our time constraint. Additionally, the entire team had little to no prior web development experience, so we already had to read plenty of other documentation and learn new syntax. This struggle pushed us to explore various APIs, eventually settling with the Cloudinary API which was both well-documented and broadly supported.
 
@@ -34,7 +33,7 @@ On the front-end side, it was difficult to find which API use to upload the imag
 
 In the end, we successfully wrote a program that uses facial recognition and machine learning with a tangible application in the real world. In doing so, we have gained an awareness of the potential impact of our work as creative developers, integrating a multitude of concepts and tools into seamless processes that can be put to good use.
 
--OpenCV accomplishments
+We successfully trained OpenCV's facial recognition algorithm to recognize a few particular faces.  Our program uses the results of the facial recognition to send information to the Raspberry Pi, which then sends text message alerts through Twilio based on who it detects.
 
 ## What we learned
 
