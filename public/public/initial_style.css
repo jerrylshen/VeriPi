@@ -3,13 +3,19 @@ body {
     background-color: aliceblue;
 }
 
-#subtitle {
+#top-bar {
+    display: flex;
     text-align: center;
     padding-top: 30px;
     margin-top: 0px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
+    padding-left: 20px;
     font-family: 'Roboto Slab', serif;
     background-color: #69abce;
+}
+
+#subtitle {
+    margin-left: 50px;
 }
 
 #drop-area {
@@ -46,6 +52,31 @@ body {
     background: #cdc;
 }
 
+#logo {
+    position: relative;
+    top: auto;
+}
+
+#about {
+    text-align: left;
+    padding-bottom: 10px;
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 20px;
+    font-family: 'Roboto Slab', serif;
+}
+
+img {
+    border: 10px;
+    position: relative;
+    display: inline;
+    padding-left: 20px;
+    padding-right: 20px;
+    max-height: 5000px;
+    max-width: 1000px;
+    margin-right: 20px;
+}
+
 .other_buttons {
     /*display: block;*/
     display: inline-block;
@@ -68,10 +99,9 @@ body {
     padding: 0px;
     margin: 0px;
     border: 0px;
-    transform: scale(0.2, 0.2);
     position: relative;
     top: 0px;
-    
+    transform: scale(0.2, 0.2);
 }
 
 #buttons-div {
@@ -95,9 +125,10 @@ body {
 
 #gallery {
     display: none;
-    position: relative;
-    width: 100px;
-    height: 100px;
+    padding: 20px;
+    position: absolute;
+    float: right;
+    
 }
     
 #text-box {

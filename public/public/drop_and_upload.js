@@ -83,6 +83,8 @@ function previewImage(image) {
         document.getElementById('gallery').className = 'small';
         document.getElementById('gallery').appendChild(img);
     }
+    document.getElementById('gallery').innerHTML = '<br> <br> <br>' + document.getElementById('gallery').innerHTML;
+    
 }
 
 let face = '';
@@ -151,7 +153,7 @@ document.getElementById('deleteAll').onclick = function() {
 
 document.getElementById('preview').onclick = function() {
     document.getElementById('gallery').className = 'small';
-    document.getElementById('gallery').style.display = 'block';
+    document.getElementById('gallery').style.display = 'flex';
 }
 
 

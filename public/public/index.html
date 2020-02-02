@@ -15,8 +15,17 @@
   </head>
     
   <body>
-      <h1 id="subtitle">Welcome to VeriPi, the AI SecurityCamera!</h1>
+      <div id='top-bar'>
+          <img id='logo' src="logo-img.jpg" height="100px" width="150px">
+        <h1 id="subtitle">Welcome to VeriPi, the AI SecurityCamera!</h1>
+      </div>
+      
+      <div id='about'>
+            VeriPi is a security camera that authenticates the user mainly through facial recognition. It is designed to be placed on the door, where it can detect when people come and go, but can be placed on other potential entry points throughout a home. In order to train this model with pictures of your own, simply upload an image below!
+      </div>
+      
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <br>
       
       <div id='input-div'>
             Enter Name of Person: <input type="text" id='text-box' onchange="changeName(this.value)">
@@ -43,6 +52,7 @@
       <div id='gallery_names'>
       
       </div>
+      
       
       <div id='gallery'>
 
