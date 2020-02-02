@@ -37,6 +37,21 @@ body {
     background: #cdc;
 }
 
+.small {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    transform: scale(0.2, 0.2);
+    
+    position: relative;
+    top: 0px;
+    
+}
+
+#buttons-div {
+    text-align: center;
+}
+
 #fileElem {
     visibility: hidden;
 }
@@ -46,7 +61,16 @@ body {
     font-family: 'Roboto Slab', serif;
 }
 
-#gallery {
+#gallery_names {
     font-family: 'Roboto Slab', serif;
     text-align: center;
 }
+
+
+#gallery {
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+    

@@ -1,4 +1,3 @@
-
 //FIX uploadImage function at the bottom
 
 let dropArea = document.getElementById("drop-area");
@@ -9,6 +8,14 @@ let img_dict = new Object();
 ['dragenter', 'dragover', 'dragleave', 'drop'].forEach(eventName => {
     dropArea.addEventListener(eventName, preventDefaults, false)
 });
+
+Object.size = function(obj) {
+    var size = 0, key;
+    for (key in obj) {
+        if (obj.hasOwnProperty(key)) size++;
+    }
+    return size;
+};
 
 function preventDefaults(e) {
     e.preventDefault();
@@ -47,18 +54,32 @@ function handleFiles(files) {
     files = [...files]
     files.forEach(uploadImage)
         //uploadImage(files[files.length-1])
+    files.forEach(viewImageNames)
     files.forEach(previewImage)
 }
 
 //Image preview (currently displays the "Name: Img-name")
-function previewImage(image) {
+function viewImageNames(image) {
     let reader = new FileReader()
     reader.readAsDataURL(image)
     reader.onloadend = function() {
         let img = document.createElement('img')
         img.src = reader.result
         //document.getElementById('gallery').appendChild(img)
-        document.getElementById('gallery').innerHTML += '<p class="name-img">' + textBox.value + ': ' + image.name + '</p>'
+        document.getElementById('gallery_names').innerHTML += '<p class="name-img">' + textBox.value + ': ' + image.name + '</p>'
+        
+        
+    }
+}
+
+function previewImage(image) {
+    let reader = new FileReader()
+    reader.readAsDataURL(image)
+    reader.onloadend = function() {
+        let img = document.createElement('img')
+        img.src = reader.result;
+        document.getElementById('gallery').className = 'small';
+        document.getElementById('gallery').appendChild(img);
     }
 }
 
@@ -70,6 +91,7 @@ function uploadImage(img) {
     
     if(img_dict[textBox.value] == undefined) {
         //                   Just [img] here will not print anything
+        console.log(typeof img)
         img_dict[textBox.value] = [img]
     } else {
         img_dict[textBox.value].push(img)
@@ -77,21 +99,25 @@ function uploadImage(img) {
     
     //fix
     console.log(JSON.stringify(img_dict))
-    //print_dict(img_dict.keys)
-    //console.log(img)
 }
 
-Object.size = function(obj) {
-    var size = 0, key;
-    for (key in obj) {
-        if (obj.hasOwnProperty(key)) size++;
-    }
-    return size;
+document.getElementById('deleteAll').onclick = function() {
+    document.getElementById('gallery_names').innerHTML = '';
+    document.getElementById('gallery').innerHTML = '';
+    document.getElementById('gallery').style.display = 'none';
+    for (var i in img_dict) delete img_dict[i];
 };
+
+
+document.getElementById('preview').onclick = function() {
+    document.getElementById('gallery').className = 'small';
+    document.getElementById('gallery').style.display = 'block';
+}
+
+
 
 function print_dict(the_keys) {
     for(var i = 0; i<Object.size(img_dict); i++) {
         console.log(img_dict[the_keys[i]].name)
     }
 }
-
