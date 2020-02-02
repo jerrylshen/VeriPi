@@ -3,6 +3,10 @@ import sendSMS
 import serial
 import WebCam
 
+while True :
+    linein = ser.readline()
+    ser.write("test")
+
 #https://www.dummies.com/computers/raspberry-pi/raspberry-pi-projects-for-dummies-cheat-sheet/
 def startSerial():
     try:
