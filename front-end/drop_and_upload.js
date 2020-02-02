@@ -130,7 +130,6 @@ function uploadImage(file) {
       var img = new Image(); // HTML5 Constructor
       img.src = tokens.join('/');
       img.alt = response.public_id;
-      document.getElementById('gallery').appendChild(img);
     }
   };
 
