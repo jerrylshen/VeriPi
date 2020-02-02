@@ -33,10 +33,11 @@ def getUno(identity):
             #turn on facial recognition
             if identity == "Unknown Person":
                 print("Unk")
-                ser.write("N")
+                ser.write("NoFace")
+                
             #if facial recognition == True:
             else:
-                ser.write("Y")
+                ser.write("YesFace")
 
         if lineIn == "TEXT":
           #send text via twilio
