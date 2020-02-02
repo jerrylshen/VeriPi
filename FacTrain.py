@@ -52,6 +52,8 @@ def prepare_training_data(data_folder_path):
         for image_name in subject_images_names:
             image_path = subject_dir_path + "/" + image_name
             image = cv2.imread(image_path)
+            #print(image_path)
+            #display_face("BLADFASDF", image)
             face, rect = detect_face(image)
             if face is not None:
                 display_face("Training on image...", face)
