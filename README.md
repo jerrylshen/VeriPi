@@ -5,21 +5,22 @@
 Security is vital to a safe and functional society. After hearing about the recent burglaries around Irvine, we wanted to find a way to help people know exactly what happens in their homes, so they can immediately contact the authories when trouble strikes. We found that the best way to address this issue would be to create a functional real-time security system that alerts you when an intruder has entered so that you can respond accordingly.  
 
 ## What it does
-VeriPi is an IoT security camera that authenticates the user mainly through facial recognition, given that the AI is given a training dataset of images. It's designed to be placed on the door, where it can detect when people come and go, but can be placed on other potential entry points throughout a home. Each user has a limited time window to verify their identity. If they fail to do so within a set timeframe, the Raspberry Pi sends a message to the user stating that there is an intruder present. In the rare case when the camera doesn't work, the user can verify their identity through a passcode. Additionally, this passcode can be shared with people that VeriPi's AI has not been trained to recognize yet.  
+VeriPi is an IoT security camera that authenticates the user mainly through facial recognition, given that the AI is given a training dataset of images. It's designed to be placed on the door, where it can detect when people come and go, but can be placed on other potential entry points throughout a home. Each user has a limited time window to verify their identity. If they fail to do so within a set timeframe, the Raspberry Pi sends a message to the user stating that there is an intruder present. In the rare case when the camera doesn't work, the user can verify their identity through a passcode. Additionally, this passcode can be shared with people that VeriPi's AI has not been trained to recognize yet. Additionally, VeriPi's website (https://hackuci2020-266911.firebaseapp.com/) enables users to upload their own pictures to contribute towards the training set of the facial recognition algorithm.
 
 ## How we built it
 The Arduino Uno, as the slave, has the following modules: accelerometer, capacitive input, and LED light.
 The Raspberry Pi 4, as the master, is used to train the AI and conduct the facial recognition aspect, while also being connected to the Internet, where it can send SMS messages to the emergency contact.    
 
-The Uno and Pi are both connected and communicate via serial. This relationship allows the Uno to be powered by the Pi which is, in turn, powered externally by a battery or outlet.  
+The Uno and Pi are both connected and communicate via serial. This relationship allows the Uno to be powered by the Pi which is, in turn, powered externally by a battery or outlet.
 
+Our website was created using Javascript, HTML, and CSS. It also leveraged the tools from Cloudinary to allow connection between users from anywhere in the world and their VeriPi.
 
 ## APIs Used
 OpenCV - uses machine learning to recognize faces and determine whether or not a user is authorized to enter.  
 
 Twilio - texts the user if an unauthorized user has been detected.  
 
-Cloudinary - allows the user to upload photos through our website (https://hackuci2020-266911.firebaseapp.com/), which can be directly accessed by the Raspberry Pi.  
+Cloudinary - allows the user to upload photos through our website, which can be directly accessed by the Raspberry Pi.
 
 
 ## Challenges we ran into
@@ -49,6 +50,7 @@ After the initial base project, we would like to add the following features:
 1. We could make the text message include the image of the intruder if it recognizes that it is an unauthorized user.  
 2. Additionally, we could add another camera in the front of the door that continuously records and tracks faces, and if the door is opened and the indoor camera is unable to recognize the face, the front camera would look through the previous footage to find the face of the intruder.  
 3. In the setup, you can choose whether or not to automatically call 911 if you do not respond within a certain amount of time to the automated message.  
+4. The website will have more features such as being able to remove previously uploaded photos from the training set and viewing all photos separated by person from the training set online.
 
 # Built With  
 Arduino Uno rev3, accelerometer, 8 key capacitive, Grove shield, LED Light, and buzzer  
