@@ -50,11 +50,18 @@ After the initial base project, we would like to add the following features:
 3. In the setup, you can choose whether or not to automatically call 911 if you do not respond within a certain amount of time to the automated message.
 
 # Built With
-Arduino Uno rev3, acceleromter, 8 key capacitive, Grove shield, LED Light
+Arduino Uno rev3, accelerometer, 8 key capacitive, Grove shield, LED Light
+
 Raspberry Pi 4, USB cables, monitor (development/debugging)
+
 Arduino IDE: C/C++
+
 Raspbian OS: Python
+
 Twilio
+
 OpenCV
+
 Cloudinary
+
 Firebase
