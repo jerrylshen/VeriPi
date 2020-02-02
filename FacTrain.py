@@ -27,7 +27,7 @@ def detect_face(img):
     # load openCV LBP face detector (LBP is faster but slightly less accurate than Haar classifier
     face_cascade = cv2.CascadeClassifier('../Downloads/lbpcascade_frontalface.xml')
     # these settings make it better at detecting faces?
-    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=3);
+    faces = face_cascade.detectMultiScale(gray, scaleFactor=1.2, minNeighbors=5, minSize=(100, 100));
     # if face not detected, return None
     if (len(faces) == 0):
         return None, None
@@ -54,7 +54,10 @@ def prepare_training_data(data_folder_path):
             image = cv2.imread(image_path)
             #print(image_path)
             #display_face("BLADFASDF", image)
-            face, rect = detect_face(image)
+            try:
+                face, rect = detect_face(image)
+            except:
+                continue
             if face is not None:
                 display_face("Training on image...", face)
                 #add face to list of faces
