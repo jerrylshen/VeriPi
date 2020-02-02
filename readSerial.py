@@ -27,6 +27,7 @@ def getUno(identity):
     print("hello")
     while True:
         lineIn = ser.readline()
+        lineIn = str(lineIn)[2:]
         print(lineIn)
         if lineIn == "ALARM":
             #turn on facial recognition
