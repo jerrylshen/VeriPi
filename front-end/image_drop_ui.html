@@ -18,12 +18,20 @@
       <h1 id="subtitle">Welcome to AISecurityCamera!</h1>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       
+      <div id='input-div'>
+            Enter Name of Person: <input type="text" id='text-box'>
+      </div>
+      
       <div id="drop-area">
           <form>
             <label class="button" for="fileElem">Drag Images Here (or Click to Select)</label>
             <br> 
             <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
           </form>
+      </div>
+      
+      <div id='gallery'>
+          
       </div>
       
       <!-- <script src="js/bootstrap.min.js"></script> -->
