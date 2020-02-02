@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>VeriPi</title>
+        
+        <!-- <link href="css/bootstrap.min.css" rel="stylesheet"> -->
+        
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab&display=swap" rel="stylesheet">
+        
+        <link href="initial_style.css" rel="stylesheet">
+        
+  </head>
+    
+  <body>
+      <h1 id="subtitle">Welcome to VeriPi, the AI SecurityCamera!</h1>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      
+      <div id='input-div'>
+            Enter Name of Person: <input type="text" id='text-box' onchange="changeName(this.value)">
+      </div>
+      
+      <div id="drop-area">
+          <form>
+            <label class="button" for="fileElem">Drag Images Here (or Click to Select)</label>
+            <br> 
+            <input type="file" id="fileElem" multiple accept="image/*" onchange="handleFiles(this.files)">
+          </form>
+      </div>
+      
+      <div id='buttons-div'>
+      
+        <button id="preview" class="other_buttons">Preview Images</button>
+        <button id="deleteAll" class="other_buttons">Delete All</button>
+        <button id="upload" class="other_buttons">Upload</button>
+      
+      </div>
+      
+      <div id='progress'></div>
+      
+      <div id='gallery_names'>
+      
+      </div>
+      
+      <div id='gallery'>
+
+      </div>
+      
+      <!-- <script src="js/bootstrap.min.js"></script> -->
+      
+      <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript">
+      </script>
+      
+      <script type="text/javascript" src="drop_and_upload.js"></script>
+      <!-- The core Firebase JS SDK is always required and must be listed first -->
+      <script src="/__/firebase/7.8.0/firebase-app.js"></script>
+
+      <!-- TODO: Add SDKs for Firebase products that you want to use
+           https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="/__/firebase/7.8.0/firebase-analytics.js"></script>
+
+      <!-- Initialize Firebase -->
+      <script src="/__/firebase/init.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    margin: 0px;
+    background-color: aliceblue;
+}
+
+#subtitle {
+    text-align: center;
+    padding-top: 30px;
+    margin-top: 0px;
+    padding-bottom: 50px;
+    font-family: 'Roboto Slab', serif;
+    background-color: #69abce;
+}
+
+#drop-area {
+    border: 2px dashed #ccc;
+    border-radius: 20px;
+    width: 500px;
+    font-family: 'Roboto Slab', serif;
+    margin: 100px auto;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    padding: 20px;
+    background-color: ghostwhite;
+}
+
+.button {
+    display: block;
+    padding: 10px;
+    margin-top: 30px;
+    box-shadow: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    background: #ccc;
+    text-align: center;
+    line-height: 150%;
+    font-size: 0.85em;
+    box-shadow: 3px 3px #888888;
+}
+
+.button:hover {
+    background: #cdc;
+}
+
+.other_buttons:hover {
+    background: #cdc;
+}
+
+.other_buttons {
+    /*display: block;*/
+    display: inline-block;
+    align-items: center;
+    background: #ccc;
+    cursor: pointer;
+    text-align: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 75%;
+    font-family: 'Roboto Slab', serif;
+    margin: 10px auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 10px;
+    box-shadow: 3px 3px #888888;
+}
+
+.small {
+    padding: 0px;
+    margin: 0px;
+    border: 0px;
+    transform: scale(0.2, 0.2);
+    position: relative;
+    top: 0px;
+    
+}
+
+#buttons-div {
+    text-align: center;
+}
+
+#fileElem {
+    visibility: hidden;
+}
+
+#input-div {
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+}
+
+#gallery_names {
+    font-family: 'Roboto Slab', serif;
+    text-align: center;
+}
+
+
+#gallery {
+    display: none;
+    position: relative;
+    width: 100px;
+    height: 100px;
+}
+    
+#text-box {
+    box-shadow: 3px 3px #888888;
+}
