@@ -15,7 +15,9 @@ The Uno and Pi are both connected and communicate via serial. This relationship 
 
 ## APIs Used
 OpenCV - uses machine learning to recognize faces and determine whether or not a user is authorized to enter
+
 Twilio - texts the user if an unauthorized user has been detected
+
 Cloudinary - allows the user to upload photos through our website which can be directly accessed by the Raspberry Pi
 
 
