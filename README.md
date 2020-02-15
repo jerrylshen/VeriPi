@@ -61,3 +61,6 @@ Arduino IDE: C/C++
 
 Raspbian OS: Python, Twilio, OpenCV  
 Website: HTML, CSS, Javascript, Cloudinary, Firebase
+
+# Other Notes  
+The sendSMS python file isn't here. It's the standard Twilio starter code with the API keys and such
